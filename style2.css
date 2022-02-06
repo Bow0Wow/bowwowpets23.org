@@ -942,7 +942,6 @@ h5 {
   color: burlywood;
   font-family: "Nanum Pen Script", cursive;
   text-align: center;
-  margin-left: 25%;
 }
 .de {
   font-family: "Outfit", sans-serif;
@@ -950,6 +949,7 @@ h5 {
   width: 50%;
   color: white;
   text-align: center;
+  margin-left: 25%;
 }
 .hee{
   display: flex;
