@@ -937,14 +937,11 @@ h5 {
   font-size: 50px;
 }
 .e {
-  margin-top: 50px;
+  margin-top: 50%;
   font-size: 70px;
   color: burlywood;
   font-family: "Nanum Pen Script", cursive;
   text-align: center;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
 }
 .de {
   font-family: "Outfit", sans-serif;
@@ -952,6 +949,11 @@ h5 {
   width: 50%;
   color: white;
   text-align: center;
+}
+.hee{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .det {
   background-color: black;
