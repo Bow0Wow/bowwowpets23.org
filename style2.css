@@ -322,7 +322,7 @@ menu-link6 {
     animation: scale 25s;
   }
   .sidebar {
-    width: 20rem;
+    width: 100rem;
     height: 160vh;
     position: fixed;
     top: 0;
@@ -332,7 +332,7 @@ menu-link6 {
   }
 }
 .sidebar {
-  width: 100%;
+  width: 40%;
   height: 100vh;
   position: fixed;
   top: 0;
