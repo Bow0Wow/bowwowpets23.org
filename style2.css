@@ -944,7 +944,7 @@ h5 {
   text-align: center;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  justify-content: center;
 }
 .de {
   font-family: "Outfit", sans-serif;
