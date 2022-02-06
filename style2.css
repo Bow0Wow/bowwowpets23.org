@@ -1,0 +1,1323 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100%;
+}
+
+.container {
+  min-height: 100%;
+}
+
+.hamburger-menu {
+  width: 3rem;
+  height: 3rem;
+  position: fixed;
+  top: 5rem;
+  right: 5rem;
+  z-index: 200;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  cursor: pointer;
+  transition: right 0.7s;
+}
+
+.change .hamburger-menu {
+  right: 33rem;
+}
+
+.line {
+  width: 100%;
+  height: 0.2rem;
+  background-color: white;
+  box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.2);
+}
+
+.change .line {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.change .line-1 {
+  transform: rotate(45deg) translate(0.3rem, 0.8rem);
+}
+
+.change .line-2 {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.change .line-3 {
+  transform: rotate(-45deg) translate(0.3rem, -0.8rem);
+}
+
+.header {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  perspective: 100rem;
+  display: grid;
+}
+.he{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center ;
+}
+.video-wrapper {
+  float: top;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: rgba(0, 0, 0);
+  overflow: hidden;
+  display: block;
+  grid-row: 1;
+  grid-column: 1;
+}
+
+.video-wrapper video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.5;
+  animation: scale 25s;
+}
+
+.banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  grid-row: 1;
+  grid-column: 1;
+}
+
+.banner .logo {
+  margin-left: 10%;
+  width: 10em;
+}
+
+.banner div {
+  display: block;
+  margin-left: 20%;
+}
+
+.banner div h1 {
+  font-family: "Baloo Da 2", serif;
+  font-size: 7rem;
+  font-weight: 300;
+  color: white;
+  letter-spacing: 0.2rem;
+  text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  animation: moveBanner 1s 0.5s forwards;
+}
+
+.banner div p {
+  font-family: "Josefin Slab", serif;
+  font-size: 3rem;
+  color: white;
+  width: 70%;
+  letter-spacing: 0.1rem;
+  margin-bottom: 4rem;
+  text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  animation: moveBanner 1s 0.7s forwards;
+}
+
+.banner div button {
+  width: 25rem;
+  height: 7rem;
+  background-color: #c29525;
+  border: none;
+  font-family: "Encode Sans SC", sans-serif;
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: white;
+  text-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  opacity: 0;
+  animation: moveBanner 1s 0.9s forwards;
+}
+
+@keyframes moveBanner {
+  0% {
+    transform: translateY(40rem) rotateY(-20deg);
+  }
+  100% {
+    transform: translateY(0) rotateY(0);
+    opacity: 1;
+  }
+}
+
+.sidebar {
+  width: 40rem;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: -40rem;
+  background-color: white;
+  transition: right 0.5s;
+  align-items: top;
+}
+
+.change .sidebar {
+  right: 0;
+}
+
+.menu {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.menu-item {
+  text-align: center;
+}
+
+.menu-link1,
+menu-link2,
+menu-link3,
+menu-link4,
+menu-link5,
+menu-link6 {
+  font-family: "Baloo Da 2", serif;
+  font-size: 2.5rem;
+  position: relative;
+}
+.menu-link1 {
+  color: gray;
+}
+.menu-link2 {
+  color: gray;
+  font-family: "Baloo Da 2", serif;
+  font-size: 2.5rem;
+  position: relative;
+}
+.menu-link3 {
+  color: gray;
+  font-family: "Baloo Da 2", serif;
+  font-size: 2.5rem;
+  position: relative;
+}
+.menu-link4 {
+  color: gray;
+  font-family: "Baloo Da 2", serif;
+  font-size: 2.5rem;
+  position: relative;
+}
+.menu-link5 {
+  color: gray;
+  font-family: "Baloo Da 2", serif;
+  font-size: 2.5rem;
+  position: relative;
+}
+.menu-link6::before {
+  content: attr(data-content);
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #c29525;
+  width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: width 0.3s ease-in-out;
+}
+
+.menu-link:hover::before {
+  width: 100%;
+}
+
+.social-media {
+  position: absolute;
+  bottom: 3rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.social-media i {
+  font-size: 2.2rem;
+  margin: 3rem;
+  width: 4.5rem;
+  height: 4.5rem;
+  background-color: gray;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+
+.social-media i:hover {
+  background-color: #c29525;
+}
+
+@media (max-width: 700px) {
+  .banner h1 {
+    font-family: "Baloo Da 2", serif;
+    font-size: 3rem;
+    font-weight: 300;
+    color: white;
+    letter-spacing: 0.2rem;
+    text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    animation: moveBanner 1s 0.5s forwards;
+  }
+  .banner p {
+    font-family: "Josefin Slab", serif;
+    font-size: 2rem;
+    color: white;
+    width: 70%;
+    letter-spacing: 0.1rem;
+    margin-bottom: 3rem;
+    text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    animation: moveBanner 1s 0.7s forwards;
+  }
+  .dev {
+    width: 10rem;
+    height: 3.5rem;
+    background-color: #c29525;
+    border: none;
+    font-family: "Encode Sans SC", sans-serif;
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: white;
+    text-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    opacity: 0;
+    animation: moveBanner 1s 0.9s forwards;
+  }
+  .video-wrapper {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow: hidden;
+  }
+
+  .video-wrapper video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5;
+    animation: scale 25s;
+  }
+  .sidebar {
+    width: 20rem;
+    height: 160vh;
+    position: fixed;
+    top: 0;
+    right: -40rem;
+    background-color: white;
+    transition: right 0.5s;
+  }
+}
+.sidebar {
+  width: 40rem;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: -40rem;
+  background-color: white;
+  transition: right 0.5s;
+  align-items: top;
+}
+
+.change .sidebar {
+  right: 0;
+}
+
+.menu {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.menu-item {
+  text-align: center;
+}
+
+.menu-link1,
+menu-link2,
+menu-link3,
+menu-link4,
+menu-link5,
+menu-link6 {
+  font-family: "Baloo Da 2", serif;
+  font-size: 2.5rem;
+  position: relative;
+}
+.menu-link1 {
+  color: gray;
+}
+.menu-link2 {
+  color: gray;
+  font-family: "Baloo Da 2", serif;
+  font-size: 2.5rem;
+  position: relative;
+}
+.menu-link3 {
+  color: gray;
+  font-family: "Baloo Da 2", serif;
+  font-size: 2.5rem;
+  position: relative;
+}
+.menu-link4 {
+  color: gray;
+  font-family: "Baloo Da 2", serif;
+  font-size: 2.5rem;
+  position: relative;
+}
+.menu-link5 {
+  color: gray;
+  font-family: "Baloo Da 2", serif;
+  font-size: 2.5rem;
+  position: relative;
+}
+.menu-link6::before {
+  content: attr(data-content);
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #c29525;
+  width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: width 0.3s ease-in-out;
+}
+
+.menu-link:hover::before {
+  width: 100%;
+}
+
+.social-media {
+  position: absolute;
+  bottom: 3rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.social-media i {
+  font-size: 2.2rem;
+  margin: 3rem;
+  width: 4.5rem;
+  height: 4.5rem;
+  background-color: gray;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+
+.social-media i:hover {
+  background-color: #c29525;
+}
+
+.content-table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 1.5em;
+  min-width: 400px;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  position: absolute;
+  left: 200px;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.content-table thead tr {
+  background-color: #009879;
+  color: #fff;
+  text-align: left;
+  font-weight: bold;
+}
+
+.content-table th,
+.content-table td {
+  padding: 12px 15px;
+}
+
+.content-table tbody tr {
+  border-bottom: 1px solid lightslategray;
+}
+
+.content-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+  color: #009879;
+  font-weight: bold;
+}
+
+.content-table tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
+h1 {
+  font-family: "Gowun Batang", serif;
+  font-size: 4em;
+}
+
+.pd {
+  font-family: "Baloo Da 2", serif;
+  font-size: 6rem;
+  color: hsl(273, 88%, 13%);
+  text-shadow: 2px 2px rgb(213, 9, 253);
+}
+.b {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: bold;
+  font-size: 2rem;
+  width: 50%;
+  position: absolute;
+  left: 320px;
+}
+@media (max-width: 700px) {
+  .banner h1 {
+    font-family: "Baloo Da 2", serif;
+    font-size: 3rem;
+    font-weight: 300;
+    color: white;
+    letter-spacing: 0.2rem;
+    text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    animation: moveBanner 1s 0.5s forwards;
+  }
+  .banner p {
+    font-family: "Josefin Slab", serif;
+    font-size: 2rem;
+    color: white;
+    width: 70%;
+    letter-spacing: 0.1rem;
+    margin-bottom: 3rem;
+    text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    animation: moveBanner 1s 0.7s forwards;
+  }
+  .dev {
+    width: 10rem;
+    height: 3.5rem;
+    background-color: #c29525;
+    border: none;
+    font-family: "Encode Sans SC", sans-serif;
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: white;
+    text-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    opacity: 0;
+    animation: moveBanner 1s 0.9s forwards;
+  }
+  .video-wrapper {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow: hidden;
+  }
+
+  .video-wrapper video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5;
+    animation: scale 25s;
+  }
+  .sidebar {
+    width: 20rem;
+    height: 160vh;
+    position: fixed;
+    top: 0;
+    right: -40rem;
+    background-color: white;
+    transition: right 0.5s;
+  }
+}
+.latest {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 100px;
+  font-family: "Montserrat", sans-serif;
+}
+h1 {
+  font-size: 36px;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+}
+.row {
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-between;
+}
+.latest-col {
+  flex-basis: 31%;
+  background: #fff3f3;
+  border-radius: 10px;
+  margin-bottom: 5%;
+  padding: 20px 12px;
+  box-sizing: border-box;
+  transition: 0.5s;
+  color: black;
+}
+h3 {
+  font-size: 25px;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  font-weight: 600;
+  margin: 10px 0;
+}
+a {
+  font-size: 25px;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  font-weight: 600;
+  margin: 10px 0;
+  color: white;
+}
+.bel {
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 1000;
+}
+.latest-col:hover {
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+  background: rgb(203, 240, 240);
+}
+@media (max-width: 700px) {
+  .row {
+    flex-direction: column;
+  }
+}
+.pavilion {
+  width: 100%;
+  margin: 10px;
+  text-align: center;
+  padding-top: 50px;
+  color: white;
+}
+.des {
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+  color: gold;
+}
+.dis-col {
+  flex-basis: 32%;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
+}
+.dis-col img {
+  margin-left: 0px;
+  width: 100%;
+  left: 30px;
+  opacity: 0.5;
+  padding: 15px 15px s;
+}
+.latest div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  top: -1;
+  left: -1;
+}
+.bow1{
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 500px ;
+  height: 80vh;
+  width: 80%;
+}
+.layer {
+  background: transparent;
+  height: 100%;
+  width: 100%;
+  color: black;
+  position: absolute;
+  top: 0%;
+  transition: 0.5s;
+}
+.layer:hover {
+  background: rgba(240, 255, 0, 0.2);
+  height: 100%;
+  width: 100%;
+  color: black;
+  position: absolute;
+  top: 0%;
+}
+.bel2 {
+  color: white;
+  font-size: 13px;
+  font-family: "Poppins", sans-serif;
+}
+.tini {
+  font-size: 25px;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  font-weight: 600;
+  margin: 10px 0;
+  color: white;
+}
+.den-col {
+  flex-basis: 31%;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  margin-bottom: 5%;
+  padding: 10px 16px;
+  box-sizing: border-box;
+  transition: 0.5s;
+  color: white;
+}
+.den-col:hover {
+  flex-basis: 31%;
+  background: rgba(0, 0, 0, 1);
+  border-radius: 10px;
+  margin-bottom: 5%;
+  padding: 20px 12px;
+  box-sizing: border-box;
+  transition: 0.5s;
+  color: white;
+}
+.district {
+  color: gold;
+}
+.quotes {
+  width: 80%;
+  margin: auto;
+  padding-top: 100px;
+  text-align: center;
+}
+.quotes-col {
+  flex-basis: 44%;
+  border-radius: 10px;
+  margin-bottom: 5%;
+  text-align: left;
+  background-color: bisque;
+  padding: 25px;
+  cursor: pointer;
+  display: flex;
+  transition: 0.5s;
+}
+.quotes-col img {
+  height: 40px;
+  margin-left: 5px;
+  margin-right: 30px;
+  border-radius: 50%;
+}
+.quotes-col:hover {
+  flex-basis: 44%;
+  border-radius: 10px;
+  margin-bottom: 5%;
+  text-align: left;
+  background-color: black;
+  color: white;
+  padding: 25px;
+  cursor: pointer;
+  display: flex;
+}
+h5 {
+  font-size: 10px;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  font-weight: 600;
+  margin: 10px;
+}
+.quote {
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  font-weight: 600;
+  margin: 10px;
+}
+.img {
+  position: absolute;
+  top: -130px;
+  width: 20%;
+  left: -100px;
+}
+.sign {
+  left: -50px;
+  width: 100%;
+  align-items: top;
+  border-radius: 10%;
+  background-color: darkcyan;
+  color: white;
+}
+
+.sign:hover {
+  width: 110%;
+  background-color: black;
+  color: lime;
+  animation: 0.5s ease-out;
+  transition: 0.1s;
+}
+
+.sign:hover {
+  width: 105%;
+  background-color: black;
+  color: lime;
+  animation: 0.5s ease-out;
+  transition: 0.1s;
+}
+
+.bow {
+  width: 25%;
+  margin-top: 50px;
+}
+
+.care,
+.cat,
+.dog,
+.hamster {  
+  position: absolute;
+  width: 15%;
+  border: groove 7px aquamarine;
+  border-radius: 50%;
+  align-tracks: bottom;
+}
+
+.care {
+  left: 250px;
+  border: groove 7px aquamarine;
+  border-radius: 50%;
+  top: 750px;
+}
+
+.cat {
+  left: 900px;
+  border: groove 7px aquamarine;
+  border-radius: 50%;
+  top: 1100px;
+}
+
+.dog {
+  left: 800px;
+  border: groove 7px aquamarine;
+  border-radius: 50%;
+  top: 750px;
+}
+
+.latest {
+  background-color: black;
+  width: 100%;
+  height: 130%;
+}
+
+@media screen and (max-width: 800px) {
+  .left,
+  .main,
+  .right {
+    width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+  }
+}
+
+.hamster {
+  left: 200px;
+  border: groove 7px aquamarine;
+  border-radius: 50%;
+  top: 1100px;
+}
+
+.deet2{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.da {
+  width: 20%;
+  position: absolute;
+  left: 100px;
+  top: 1500px;
+}
+
+.ta {
+  flex-basis: 31%;
+  width: 50%;
+  background-color: rgb(153, 87, 21);
+  opacity: 80%;
+  border-radius: 10px;
+  margin-bottom: 5%;
+  padding: 10px 100px;
+  box-sizing: border-box;
+  margin-left: 400px;
+  margin-top: 0px;
+}
+.tent{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.chatt{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  min-height: 100%;
+}
+.t {
+  font-size: 20px;
+  font-family: "Outfit", sans-serif;
+  color: white;
+}
+.r {
+  color: rgb(153, 87, 21);
+  font-family: "Nanum Pen Script", cursive;
+  font-size: 50px;
+}
+
+.d {
+  color: white;
+  font-family: "Nanum Pen Script", cursive;
+  font-size: 50px;
+}
+.deb {
+  width: 25rem;
+  height: 7rem;
+  background-color: rgb(0, 119, 255);
+  border: none;
+  font-family: "Nanum Pen Script", cursive;
+  font-size: 2rem;
+  color: black;
+  text-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  opacity: 0;
+  animation: moveBanner 1s 0.9s forwards;
+  position: absolute;
+  top: 1660px;
+  left: 400px;
+}
+.deb a {
+  font-family: "Nanum Pen Script", cursive;
+  font-size: 50px;
+}
+.latest1 {
+  background-color: black;
+  width: 100%;
+  height: 80%;
+}
+.d1 {
+  color: #ebf0eb;
+  font-family: "Nanum Pen Script", cursive;
+  font-size: 50px;
+}
+.e {
+  margin-top: 50px;
+  font-size: 70px;
+  color: burlywood;
+  font-family: "Nanum Pen Script", cursive;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.de {
+  font-family: "Outfit", sans-serif;
+  font-size: 25px;
+  width: 50%;
+  color: white;
+  text-align: center;
+}
+.det {
+  background-color: black;
+}
+.shr {
+  position: absolute;
+  top: 400px;
+  left:450px;
+  width: 400px;
+}
+.ttt {
+  display: block;
+  width: 100%;
+}
+.ov {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: 0.5s;
+}
+.ov:hover {
+  opacity: 1;
+}
+.title {
+  font-size: 3em;
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+}
+.dent {
+  font-size: 2em;
+  margin-top: 0.25em;
+  font-family: "Quicksand", sans-serif;
+}
+.dent1 {
+  font-size: 1.25em;
+  margin-top: 0.25em;
+  width: 50%;
+  font-family: "Poppins", sans-serif;
+}
+.shr1{
+  position: absolute;
+  top: 20px;
+  left: 450px;
+  width: 427px;
+}
+.e1{
+  margin-top: 50px;
+  font-size: 50px;
+  color: burlywood;
+  font-family: "Nanum Pen Script", cursive;
+  position: absolute;
+  top:250px;
+  left: 470px;
+}
+.img1 {
+  position: absolute;
+  top: 10px;
+  width: 10%;
+  left: 10px;
+}
+.deee{
+  background-color: black;
+  width: 100%;
+  height: 80%;
+}
+.tt{
+  margin-top: 50px;
+  font-size: 50px;
+  color: white;
+  font-family: "Nanum Pen Script", cursive;
+  position: absolute;
+  top:1800px;
+  left: 270px
+}
+.mi{
+  margin-top: 50px;
+  font-size: 19px;
+  color: white;
+  font-family: "Outfit", sans-serif;
+  position: absolute;
+  top:1860px;
+  left:340px;
+  width:50%;
+}
+.deb2{
+  width: 25rem;
+  height: 7rem;
+  background-color: rgb(0, 119, 255);
+  border: none;
+  font-family: "Nanum Pen Script", cursive;
+  font-size: 2rem;
+  color: black;
+  text-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  opacity: 0;
+  animation: moveBanner 1s 0.9s forwards;
+  position: absolute;
+  top: 2080px;
+  left: 530px;
+}
+.deb2 a{
+  font-family: "Nanum Pen Script", cursive;
+  font-size: 40px;
+}
+.d2{
+  background-color: black;
+  width: 100%;
+  height: 80%;
+}
+.mi2{
+  margin-top: 50px;
+  font-size: 19px;
+  color: white;
+  font-family: "Outfit", sans-serif;
+  position: absolute;
+  top:2280px;
+  left:340px;
+  width:50%;
+}
+.dec1{
+  width: 25rem;
+  height: 7rem;
+  background-color: rgb(0, 119, 255);
+  border: none;
+  font-family: "Nanum Pen Script", cursive;
+  font-size: 2rem;
+  color: black;
+  text-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  opacity: 0;
+  animation: moveBanner 1s 0.9s forwards;
+  position: absolute;
+  top: 2430px;
+  left: 380px;
+}
+.dec2{
+  width: 25rem;
+  height: 7rem;
+  background-color: rgb(0, 119, 255);
+  border: none;
+  font-family: "Nanum Pen Script", cursive;
+  font-size: 2rem;
+  color: black;
+  text-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  opacity: 0;
+  animation: moveBanner 1s 0.9s forwards;
+  position: absolute;
+  top: 2430px;
+  left: 680px;
+}
+.tt1{
+  margin-top: 50px;
+  font-size: 50px;
+  color: rgb(0, 174, 255);
+  font-family: "Nanum Pen Script", cursive;
+  position: absolute;
+  top:2210px;
+  left: 510px
+}
+.ad{
+  background-color: black;
+  width: 100%;
+  height: 80%;
+}
+.e3{
+  position: absolute;
+  top: 860px;
+  color: #ebf0eb;
+  left: 540px;
+  font-size: 40px;
+  font-family: "Quicksand", sans-serif;
+}
+.con{
+  opacity: 1;
+  position: absolute;
+  top: 990px;
+  color: #ebf0eb;
+  left: 540px;
+  font-size: 17px;
+  font-family: "Quicksand", sans-serif;
+  text-align: center;
+}
+.ad{
+  background-color: red;
+  width: 100%;
+  height: 40%;
+  position: absolute;
+  top: 990px;
+  color: white;
+  font-family: "Quicksand", sans-serif;
+  font-size: 20px;
+  text-align: center;
+}
+
+.ad h2{
+  margin-top: 0px;
+  font-family: "Quicksand", sans-serif;
+  font-size: 30px;
+  text-align: center;
+}
+
+.ad img{
+  width: 10%;
+  position: absolute;
+  left: 100px;
+  top: 50px;
+}
+.ad1{
+  background-color: red;
+  width: 100%;
+  height: 40%;
+  position: absolute;
+  top: 2690px;
+  color: white;
+  font-family: "Quicksand", sans-serif;
+  font-size: 20px;
+  text-align: center;
+}
+
+.ad1 h2{
+  margin-top: 0px;
+  font-family: "Quicksand", sans-serif;
+  font-size: 30px;
+  text-align: center;
+}
+
+.ad1 img{
+  width: 10%;
+  position: absolute;
+  left: 100px;
+  top: 50px;
+}
+
+.ind{
+  position: absolute;
+  width: 15%;
+  border: groove 7px aquamarine;
+  border-radius: 50%;
+  align-tracks: bottom;
+  top: 2310px;  
+  left: 100px;
+}
+
+.soc{
+  width: 25rem;
+  height: 7rem;
+  background-color: rgb(0, 119, 255);
+  border: none;
+  font-family: "Nanum Pen Script", cursive;
+  font-size: 2rem;
+  color: black;
+  text-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  opacity: 0;
+  animation: moveBanner 1s 0.9s forwards;
+  position: absolute;
+  top: 850px;
+  left: 530px;
+}
+.bet{
+  background-color: black;
+}
+.hhh {
+  margin-top: 50px;
+  margin-left: 400px;
+  font-size: 70px;
+  color: burlywood;
+  font-family: "Nanum Pen Script", cursive;
+}
+.pl{
+  opacity: 0;
+  font-family: 'Rowdies', cursive; ;
+  animation: moveBanner 1s 0.9s forwards;
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  left: 450px;
+  text-align: center;
+}
+.di{
+  position: absolute;
+  width: 15%;
+  border: groove 7px aquamarine;
+  border-radius: 50%;
+  align-tracks: bottom;
+  left: 400px;
+  top: 250px;
+  animation: moveBanner 1s 0.9s forwards;
+  opacity: 0;
+}
+.dit{
+  position: absolute;
+  width: 15%;
+  border: groove 7px aquamarine;
+  border-radius: 50%;
+  align-tracks: bottom;
+  left: 700px;
+  top: 250px;
+  animation: moveBanner 1s 0.9s forwards;
+  opacity: 0;
+}
+.ditt{
+  position: absolute;
+  width: 15%;
+  height: 30%;
+  border: groove 7px aquamarine;
+  border-radius: 50%;
+  align-tracks: bottom;
+  left: 800px;
+  top: 450px;
+  animation: moveBanner 1s 0.9s forwards;
+  opacity: 0;
+}
+.dit2{
+  position: absolute;
+  width: 15%;
+  height: 30%;
+  border: groove 7px aquamarine;
+  border-radius: 50%;
+  align-tracks: bottom;
+  left: 300px;
+  top: 450px;
+  animation: moveBanner 1s 0.9s forwards;
+  opacity: 0;
+}
+.soc1{
+  width: 25rem;
+  height: 7rem;
+  background-color: rgb(0, 119, 255);
+  border: none;
+  font-family: "Nanum Pen Script", cursive;
+  font-size: 2rem;
+  color: black;
+  text-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  opacity: 0;
+  animation: moveBanner 1s 0.9s forwards;
+  position: absolute;
+  top: 500px;
+  left: 530px;
+}
+.ad2{
+  background-color: red;
+  width: 100%;
+  height: 40%;
+  position: absolute;
+  top: 790px;
+  color: white;
+  font-family: "Quicksand", sans-serif;
+  font-size: 20px;
+  text-align: center;
+}
+
+.ad2 h2{
+  margin-top: 0px;
+  font-family: "Quicksand", sans-serif;
+  font-size: 30px;
+  text-align: center;
+}
+
+.ad2 img{
+  width: 10%;
+  position: absolute;
+  left: 100px;
+  top: 50px;
+}
+
