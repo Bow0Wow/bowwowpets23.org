@@ -929,6 +929,7 @@ h5 {
 .latest1 {
   background-color: black;
   width: 100%;
+  padding: 10%;
 }
 .d1 {
   color: #ebf0eb;
@@ -1024,6 +1025,7 @@ h5 {
 .deee{
   background-color: black;
   width: 100%;
+  padding: 10%;
 }
 .tt{
   margin-top: 100px;
@@ -1062,6 +1064,7 @@ h5 {
 .d2{
   background-color: black;
   width: 100%;
+  padding: 10%;
 }
 .mi2{ 
   font-size: 19px;
@@ -1156,6 +1159,7 @@ h5 {
 .ad1{
   background-color: red;
   width: 100%;
+  padding-bottom: 10%;
   color: white;
   font-family: "Quicksand", sans-serif;
   font-size: 20px;
