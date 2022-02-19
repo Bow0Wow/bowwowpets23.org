@@ -17,6 +17,10 @@ html {
 
 body {
   min-height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-family: 'Raleway',Sans-serif;
 }
 
 .container {
